@@ -28,3 +28,6 @@ const App = () => {
 }
 
 export default App
+
+//navbar me btns ke bich gap jyada hai or 
+// pricibg sec me hovre effect km krna h cards ko thoda chhota rkhna hai 

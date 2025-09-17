@@ -46,20 +46,20 @@ const Pricing = () => {
         whileInView = {{opacity:1,y:0}}
         transition={{duration:0.6,delay:0.8}}
         viewport={{once:true}}
-       className="text-3xl sm:text-4xl lg:text-5xl text-center my-8 tracking-wider mb-12">
+       className="text-3xl sm:text-4xl lg:text-6xl text-center my-8 tracking-wider mb-20">
         Pricing
       </motion.h1>
 
       {/* cards */}
       <motion.div
-       className="flex flex-wrap justify-center mt-4 ">
+       className="flex flex-wrap justify-center ">
         {data.map((plan, index) => (
           <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
-  whileInView={{ opacity: 1, scale: index === 1 ? 1 : 1 }} // middle card bigger
+  whileInView={{ opacity: 1, scale: index === 1 ? 1.02 : 1 }} // middle card bigger
   transition={{ duration: 0.6, delay: index * 0.2, type: "spring", stiffness: 120 }}
   viewport={{ once: true }}
-  whileHover={{ scale: 1.05, y: -10 }}
+  
            key={index} className={`w-full sm:w-1/2 lg:w-1/3 p-4 transition-transform duration-300 s  ${
                   index === 1
                     ? "scale-110 bg-neutral-800 rounded-xl"
@@ -72,13 +72,13 @@ const Pricing = () => {
               </p>
 
               {/* Price */}
-              <p className=" mb-8">
+              <p className=" mb-4">
                 <span className="text-4xl font-bold mr-2">{plan.Rup}</span>
                 <span className="text-neutral-500 text-md">/Month</span>
               </p>
 
               {/* Features */}
-              <ul className="space-y-8">
+              <ul className="space-y-4">
                 {plan.features.map((f, i) => (
                   <li key={i} className="flex items-center gap-2">
                     <span className="">{f.icon}</span>
